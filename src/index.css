@@ -1,3 +1,12 @@
+/* righteous-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/righteous-v18-latin-regular.woff2') format('woff2'); 
+}
+
 * {
     margin: 0;
     padding: 0;

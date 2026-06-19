@@ -3,25 +3,60 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(35 39 47);
 }
 
 header {
     display: flex;
-    padding: 2rem 2.5rem;
     justify-content: space-between;
-    border-bottom: 0.8px solid rgb(0, 0, 0);
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header p {
+    font-family: 'Righteous';
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 3rem;
 }
 
 .home-info {
-    text-align: center;
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+.home-info h1 {
+    font-size: 3.5rem;
 }
 
 .home-info p {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    color: rgb(64 71 86);
+}
+
+.home-info button {
+  background: rgb(35 39 47);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  border-radius: 4px;
 }
