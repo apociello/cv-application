@@ -1,11 +1,11 @@
-.home-info {
-  padding: 0 2rem;
+main.home-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   text-align: center;
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
 .home-info h1 {
