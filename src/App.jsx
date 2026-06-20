@@ -1,14 +1,13 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import sunIcon from './assets/images/sun.svg';
 import moonIcon from './assets/images/moon.svg';
-import './App.css';
 import CvPage from './pages/CvPage';
+import './App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [showCvPage, setShowCvPage] = useState(false);
-
   const icon = darkMode ? moonIcon : sunIcon;
 
   function toggleDarkMode() {
@@ -26,7 +25,10 @@ function App() {
         </button>
       </header>
 
-      {showCvPage ? <CvPage /> : <HomePage goToCvPage={setShowCvPage}/> }
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path="/create" element={<CvPage />} />
+      </Routes>
     </>
   );
 }
