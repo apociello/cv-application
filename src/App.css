@@ -63,4 +63,9 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.home-info button:hover {
+    background-color: var(--color-btn-bg-hover);
 }

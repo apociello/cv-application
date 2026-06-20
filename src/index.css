@@ -13,6 +13,7 @@
   --color-base-text: rgb(64 71 86);
   --color-btn-bg: rgb(35 39 47);
   --color-btn-text: white;
+  --color-btn-bg-hover: rgb(53, 56, 66);
   --border-header: 1px solid #e5e5e5;
 }
 
@@ -21,6 +22,7 @@
   --color-base-bg: #23272f;
   --color-base-text: rgb(127, 134, 148);
   --color-btn-bg: rgb(246 247 249);
+  --color-btn-bg-hover: rgb(211, 211, 213);
   --color-btn-text: #23272f;
   --border-header: 1px solid #363b45;
 }
