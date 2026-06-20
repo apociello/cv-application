@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import HomePage from './pages/homePage';
-import './App.css';
+import HomePage from './pages/HomePage';
 import sunIcon from './assets/images/sun.svg';
 import moonIcon from './assets/images/moon.svg';
+import './App.css';
+import CvPage from './pages/CvPage';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showCvPage, setShowCvPage] = useState(false);
 
   const icon = darkMode ? moonIcon : sunIcon;
 
@@ -24,7 +26,7 @@ function App() {
         </button>
       </header>
 
-      <HomePage />
+      {showCvPage ? <CvPage /> : <HomePage goToCvPage={setShowCvPage}/> }
     </>
   );
 }
