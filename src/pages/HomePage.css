@@ -1,0 +1,31 @@
+.home-info {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.home-info h1 {
+  font-size: 3.5rem;
+}
+
+.home-info p {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--color-base-text);
+}
+
+.home-info button {
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  padding: 10px 24px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.home-info button:hover {
+  background-color: var(--color-btn-bg-hover);
+}

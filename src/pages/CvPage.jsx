@@ -1,8 +1,14 @@
 function CvPage() {
     return (
-        <>
-        <h1>Hello World!</h1>
-        </>
+        <main>
+            <div className="sections">
+
+            </div>
+
+            <div className="preview">
+                
+            </div>
+        </main>
     )
 }
 
