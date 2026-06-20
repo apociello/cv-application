@@ -1,13 +1,20 @@
 import sunIcon from "../assets/images/sun.svg"
+import moonIcon from "../assets/images/moon.svg"
+function HomePage({darkMode, setDarkMode}){
 
-function HomePage(){
+    const icon = darkMode ? moonIcon : sunIcon;
+
+    function toggleDarkMode(){
+        setDarkMode(!darkMode);
+        document.documentElement.className = darkMode ? 'dark' : 'light'
+    }
 
     return (
         <div className="home-page-container">
             <header>
                 <p>CVStudio</p>
-                <button>
-                    <img src={sunIcon} width="27" alt="" />
+                <button onClick={() => toggleDarkMode()}>
+                    <img src={icon} width="21" alt="" />
                 </button>
             </header>
 
