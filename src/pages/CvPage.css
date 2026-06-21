@@ -5,16 +5,14 @@ main.cv-container {
 }
 
 .sections {
-  background-color: var(--color-sections-bg);
-  padding: 1rem 1.5rem;
-}
-
-.sections {
   display: flex;
   flex-direction: column;
   flex: 1.5;
   gap: 4rem;
-  border-radius: 5px;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-sections-bg);
+  box-shadow: var(--border-sections);
 }
 
 .preview {
