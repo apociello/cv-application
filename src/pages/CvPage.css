@@ -17,8 +17,9 @@ main.cv-container {
 
 .preview {
   flex: 1;
-  background-color: white;
-  color: black;
-  border: 1px solid rgb(220, 220, 220);
+  background-color: var(--color-preview-bg);
+  color: var(--color-preview-text);
+  border: var(--border-preview);
   padding: 0.8rem 1.3rem;
+  border-radius: 2px;
 }

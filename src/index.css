@@ -17,6 +17,9 @@
   --border-header: 1px solid #e5e5e5;
   --color-sections-bg: #ebedf0;
   --border-sections: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  --color-preview-bg: white;
+  --color-preview-text: black;
+  --border-preview: 1px solid rgba(0, 0, 0, 0.18);
 }
 
 :root.dark {
@@ -29,6 +32,9 @@
   --border-header: 1px solid #363b45;
   --color-sections-bg: rgb(52 58 70);
   --border-sections: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --color-preview-bg: #16181d;
+  --color-preview-text: rgb(255, 254, 254);
+  --border-preview: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 * {
