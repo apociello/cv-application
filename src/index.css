@@ -33,7 +33,7 @@
   --color-sections-bg: rgb(52 58 70);
   --border-sections: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   --color-preview-bg: #16181d;
-  --color-preview-text: rgb(255, 254, 254);
+  --color-preview-text: rgb(152, 152, 152);
   --border-preview: 1px solid rgba(157, 157, 157, 0.18);
 }
 

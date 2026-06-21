@@ -19,14 +19,16 @@ main.cv-container {
   font-size: 0.8rem;
   flex: 1;
   background-color: var(--color-preview-bg);
-  color: var(--color-preview-text);
   border: var(--border-preview);
   padding: 2rem 1.5rem;
   border-radius: 2px;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.preview p {
+  color: var(--color-preview-text);
 }
 
 .preview .preview-header {
