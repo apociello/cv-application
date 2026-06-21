@@ -34,7 +34,7 @@
   --border-sections: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   --color-preview-bg: #16181d;
   --color-preview-text: rgb(255, 254, 254);
-  --border-preview: 1px solid rgba(255, 255, 255, 0.18);
+  --border-preview: 1px solid rgba(157, 157, 157, 0.18);
 }
 
 * {
