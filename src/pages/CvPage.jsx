@@ -8,6 +8,9 @@ function CvPage() {
           <h4>CONTACT</h4>
         </section>
 
+        <section className="profile">
+          <h4>PROFILE</h4>
+        </section>
         <section className="education">
           <h4>EDUCATION</h4>
         </section>
@@ -40,10 +43,11 @@ function CvPage() {
             <h2>Profile</h2>
 
             <p>
-              Backend-focused software engineer with a strong foundation in distributed
-              systems and software architecture. Experienced in designing scalable
-              services and solving complex technical challenges, with a continuous
-              drive to learn and apply new technologies.
+              Backend-focused software engineer with a strong foundation in
+              distributed systems and software architecture. Experienced in
+              designing scalable services and solving complex technical
+              challenges, with a continuous drive to learn and apply new
+              technologies.
             </p>
           </div>
 
