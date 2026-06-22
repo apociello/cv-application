@@ -26,7 +26,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CvPage />} />
       </Routes>
     </>
