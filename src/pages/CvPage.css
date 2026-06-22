@@ -32,9 +32,13 @@ section .form-line {
   justify-content: space-between;
 }
 
-.preview {
-  font-size: 0.8rem;
+.preview-container{
   flex: 1;
+}
+
+.preview {
+  min-height: 660px;
+  font-size: 0.8rem;
   background-color: var(--color-preview-bg);
   border: var(--border-preview);
   padding: 2rem 1.5rem;
