@@ -1,8 +1,21 @@
+import { useState } from 'react';
 import './CvPage.css';
 import Preview from '../components/Preview';
 import example from '../data/example';
 
 function CvPage() {
+  const [contact, setContact] = useState({
+    firstName: example.contact.firstName,
+    lastName: example.contact.lastName,
+    phone: example.contact.phone,
+    email: example.contact.email,
+    location: example.contact.location,
+  });
+
+  const [profile, setProfile] = useState({
+    description: example.profile.description,
+  });
+
   return (
     <main className="cv-container">
       <div className="sections">
@@ -11,33 +24,73 @@ function CvPage() {
 
           <div className="form-line">
             <label htmlFor="first-name">First Name</label>
-            <input id="first-name" type="text" />
+            <input
+              value={contact.firstName}
+              onChange={(e) =>
+                setContact({ ...contact, firstName: e.target.value })
+              }
+              id="first-name"
+              type="text"
+            />
           </div>
 
           <div className="form-line">
             <label htmlFor="last-name">Last Name</label>
-            <input id="last-name" type="text" />
+            <input
+              value={contact.lastName}
+              onChange={(e) =>
+                setContact({ ...contact, lastName: e.target.value })
+              }
+              id="last-name"
+              type="text"
+            />
           </div>
 
           <div className="form-line">
-            <label htmlFor="telephone">Telephone</label>
-            <input id="telephone" type="text" />
+            <label htmlFor="phone">Phone</label>
+            <input
+              value={contact.phone}
+              onChange={(e) =>
+                setContact({ ...contact, phone: e.target.value })
+              }
+              id="phone"
+              type="text"
+            />
           </div>
 
           <div className="form-line">
             <label htmlFor="email">Email</label>
-            <input id="email" type="text" />
+            <input
+              value={contact.email}
+              onChange={(e) =>
+                setContact({ ...contact, email: e.target.value })
+              }
+              id="email"
+              type="text"
+            />
           </div>
 
           <div className="form-line">
             <label htmlFor="location">Location</label>
-            <input id="location" type="text" />
+            <input
+              value={contact.location}
+              onChange={(e) =>
+                setContact({ ...contact, location: e.target.value })
+              }
+              id="location"
+              type="text"
+            />
           </div>
         </section>
 
         <section className="profile">
           <h4>PROFILE</h4>
-          <textarea name="" id=""></textarea>
+          <textarea
+            value={profile.description}
+            onChange={(e) => setProfile({ description: e.target.value })}
+            name=""
+            id=""
+          ></textarea>
         </section>
         <section className="education">
           <h4>EDUCATION</h4>
@@ -100,8 +153,8 @@ function CvPage() {
 
       <div className="preview-container">
         <Preview
-          contact={example.contact}
-          profile={example.profile}
+          contact={contact}
+          profile={profile}
           education={example.education}
           experience={example.experience}
         />
