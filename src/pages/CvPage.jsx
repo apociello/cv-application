@@ -16,6 +16,28 @@ function CvPage() {
     description: example.profile.description,
   });
 
+  const [education, setEducation] = useState([
+    {
+      id: crypto.randomUUID(),
+      institution: 'Boston University',
+      startYear: '2017',
+      endYear: '2020',
+      degree: 'Bachelor of Software Engineering',
+      description: `Studied software development, databases, algorithms and
+                  computer systems.`,
+    },
+    {
+      id: crypto.randomUUID(),
+      institution: 'Rice University',
+      startYear: '2020',
+      endYear: '2022',
+      degree: 'MSc Software Architecture & Distributed Systems',
+      description: `Specialized in large-scale system design, microservices
+                  architecture, concurrency, distributed computing, and
+                  performance optimization of backend systems.`,
+    },
+  ]);
+
   return (
     <main className="cv-container">
       <div className="sections">
@@ -94,31 +116,79 @@ function CvPage() {
         </section>
         <section className="education">
           <h4>EDUCATION</h4>
+          {education.map((study) => (
+            <div key={study.id} className="study">
+              <div className="form-line">
+                <label htmlFor="institution">Institution</label>
+                <input
+                  value={study.institution}
+                  onChange={(e) =>
+                    setEducation(
+                      education.map((study2) =>
+                        study2.id === study.id
+                          ? { ...study2, institution: e.target.value }
+                          : study2,
+                      ),
+                    )
+                  }
+                  id="institution"
+                  type="text"
+                />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="institution">Institution</label>
-            <input id="institution" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="degree">Degree</label>
+                <input value={study.degree} id="degree" onChange={(e) =>
+                    setEducation(
+                      education.map((study2) =>
+                        study2.id === study.id
+                          ? { ...study2, degree: e.target.value }
+                          : study2,
+                      ),
+                    )
+                  } type="text" />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="degree">Degree</label>
-            <input id="degree" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="start-year">Start Year</label>
+                <input value={study.startYear} onChange={(e) =>
+                    setEducation(
+                      education.map((study2) =>
+                        study2.id === study.id
+                          ? { ...study2, startYear: e.target.value }
+                          : study2,
+                      ),
+                    )
+                  } id="start-year" type="text" />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="start-year">Start Year</label>
-            <input id="start-year" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="end-year">End Year</label>
+                <input value={study.endYear} onChange={(e) =>
+                    setEducation(
+                      education.map((study2) =>
+                        study2.id === study.id
+                          ? { ...study2, endYear: e.target.value }
+                          : study2,
+                      ),
+                    )
+                  } id="end-year" type="text" />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="end-year">End Year</label>
-            <input id="end-year" type="text" />
-          </div>
-
-          <div className="form-line">
-            <label htmlFor="description">Description</label>
-            <input id="description" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="description">Description</label>
+                <input value={study.description} onChange={(e) =>
+                    setEducation(
+                      education.map((study2) =>
+                        study2.id === study.id
+                          ? { ...study2, description: e.target.value }
+                          : study2,
+                      ),
+                    )
+                  } id="description" type="text" />
+              </div>
+            </div>
+          ))}
         </section>
 
         <section className="experience">
@@ -155,7 +225,7 @@ function CvPage() {
         <Preview
           contact={contact}
           profile={profile}
-          education={example.education}
+          education={education}
           experience={example.experience}
         />
       </div>
