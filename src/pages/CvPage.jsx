@@ -43,11 +43,27 @@ function CvPage() {
               setEducation={setEducation}
             />
           ))}
+          <button
+            onClick={() =>
+              setEducation([
+                ...education,
+                {
+                  id: crypto.randomUUID(),
+                  institution: '',
+                  startYear: '',
+                  endYear: '',
+                  degree: '',
+                  description: '',
+                },
+              ])
+            }
+          >
+            +
+          </button>
         </section>
 
         <section className="experience">
-          <h4>EXPEREINCE</h4>
-
+          <h4>EXPERIENCE</h4>
           {experience.map((job) => (
             <Job
               key={job.id}
@@ -56,6 +72,23 @@ function CvPage() {
               setExperience={setExperience}
             />
           ))}
+          <button
+            onClick={() =>
+              setExperience([
+                ...experience,
+                {
+                  id: crypto.randomUUID(),
+                  company: '',
+                  startYear: '',
+                  endYear: '',
+                  position: '',
+                  description: '',
+                },
+              ])
+            }
+          >
+            +
+          </button>
         </section>
       </div>
 
