@@ -12,10 +12,7 @@ function CvPage() {
     location: example.contact.location,
   });
 
-  const [profile, setProfile] = useState({
-    description: example.profile.description,
-  });
-
+  const [profile, setProfile] = useState(example.profile);
   const [education, setEducation] = useState(example.education);
   const [experience, setExperience] = useState(example.experience);
 
@@ -89,8 +86,8 @@ function CvPage() {
         <section className="profile">
           <h4>PROFILE</h4>
           <textarea
-            value={profile.description}
-            onChange={(e) => setProfile({ description: e.target.value })}
+            value={profile}
+            onChange={(e) => setProfile(e.target.value)}
             name=""
             id=""
           ></textarea>

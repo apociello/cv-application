@@ -6,13 +6,11 @@ const person = {
     email: 'ethan_winters@gmail.com',
     location: 'Boston, USA',
   },
-  profile: {
-    description: `Backend-focused software engineer with a strong foundation in
+  profile: `Backend-focused software engineer with a strong foundation in
               distributed systems and software architecture. Experienced in
               designing scalable services and solving complex technical
               challenges, with a continuous drive to learn and apply new
               technologies.`,
-  },
   education: [
     {
       id: crypto.randomUUID(),

@@ -19,7 +19,7 @@ function Preview({ contact, profile, education, experience }) {
       <div className="preview-main">
         <div className="profile-box">
           <h2>Profile</h2>
-          <p>{profile.description}</p>
+          <p>{profile}</p>
         </div>
 
         <div className="box">
