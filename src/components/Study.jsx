@@ -90,6 +90,13 @@ function Study({ study, education, setEducation }) {
           type="text"
         />
       </div>
+      <button
+        onClick={() =>
+          setEducation(education.filter((study2) => study2.id != study.id))
+        }
+      >
+        X
+      </button>
     </div>
   );
 }

@@ -90,6 +90,13 @@ function Job({ job, experience, setExperience }) {
           type="text"
         />
       </div>
+      <button
+        onClick={() =>
+          setExperience(experience.filter((job2) => job2.id != job.id))
+        }
+      >
+        X
+      </button>
     </div>
   );
 }
