@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Preview from '../components/Preview';
 import example from '../data/example';
 import Contact from '../components/Contact';
+import Profile from '../components/Profile';
 import './CvPage.css';
 
 
@@ -28,12 +29,7 @@ function CvPage() {
 
         <section className="profile">
           <h4>PROFILE</h4>
-          <textarea
-            value={profile}
-            onChange={(e) => setProfile(e.target.value)}
-            name=""
-            id=""
-          ></textarea>
+          <Profile profile={profile} setProfile={setProfile}/>
         </section>
 
         <section className="education">
