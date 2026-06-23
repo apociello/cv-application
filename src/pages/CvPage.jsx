@@ -98,7 +98,7 @@ function CvPage() {
           {education.map((study) => (
             <div key={study.id} className="study">
               <div className="form-line">
-                <label htmlFor="institution">Institution</label>
+                <label htmlFor={`institution-${study.id}`}>Institution</label>
                 <input
                   value={study.institution}
                   onChange={(e) =>
@@ -110,16 +110,16 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="institution"
+                  id={`institution-${study.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="degree">Degree</label>
+                <label htmlFor={`degree-${study.id}`}>Degree</label>
                 <input
                   value={study.degree}
-                  id="degree"
+                  id={`degree-${study.id}`}
                   onChange={(e) =>
                     setEducation(
                       education.map((study2) =>
@@ -134,7 +134,7 @@ function CvPage() {
               </div>
 
               <div className="form-line">
-                <label htmlFor="start-year">Start Year</label>
+                <label htmlFor={`startYear-${study.id}`}>Start Year</label>
                 <input
                   value={study.startYear}
                   onChange={(e) =>
@@ -146,13 +146,13 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="start-year"
+                  id={`startYear-${study.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="end-year">End Year</label>
+                <label htmlFor={`endYear-${study.id}`}>End Year</label>
                 <input
                   value={study.endYear}
                   onChange={(e) =>
@@ -164,13 +164,13 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="end-year"
+                  id={`endYear-${study.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="description">Description</label>
+                <label htmlFor={`description-${study.id}`}>Description</label>
                 <textarea
                   value={study.description}
                   onChange={(e) =>
@@ -182,7 +182,7 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="description"
+                  id={`description-${study.id}`}
                   type="text"
                 />
               </div>
@@ -196,7 +196,7 @@ function CvPage() {
           {experience.map((job) => (
             <div key={job.id} className="job">
               <div className="form-line">
-                <label htmlFor="company">Company</label>
+                <label htmlFor={`company-${job.id}`}>Company</label>
                 <input
                   value={job.company}
                   onChange={(e) =>
@@ -208,13 +208,13 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="company"
+                  id={`company-${job.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="position">Position</label>
+                <label htmlFor={`position-${job.id}`}>Position</label>
                 <input
                   value={job.position}
                   onChange={(e) =>
@@ -226,13 +226,13 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="position"
+                  id={`position-${job.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="start-year">Start Year</label>
+                <label htmlFor={`startYear-${job.id}`}>Start Year</label>
                 <input
                   value={job.startYear}
                   onChange={(e) =>
@@ -244,13 +244,13 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="start-year"
+                  id={`startYear-${job.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="end-year">End Year</label>
+                <label htmlFor={`endYear-${job.id}`}>End Year</label>
                 <input
                   value={job.endYear}
                   onChange={(e) =>
@@ -262,13 +262,13 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="end-year"
+                  id={`endYear-${job.id}`}
                   type="text"
                 />
               </div>
 
               <div className="form-line">
-                <label htmlFor="description">Description</label>
+                <label htmlFor={`description-${job.id}`}>Description</label>
                 <textarea
                   value={job.description}
                   onChange={(e) =>
@@ -280,7 +280,7 @@ function CvPage() {
                       ),
                     )
                   }
-                  id="description"
+                  id={`description-${job.id}`}
                   type="text"
                 />
               </div>
