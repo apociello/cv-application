@@ -3,8 +3,8 @@ import Preview from '../components/Preview';
 import example from '../data/example';
 import Contact from '../components/Contact';
 import Profile from '../components/Profile';
+import Study from '../components/Study';
 import './CvPage.css';
-
 
 function CvPage() {
   const [contact, setContact] = useState({
@@ -24,108 +24,22 @@ function CvPage() {
       <div className="sections">
         <section className="contact">
           <h4>CONTACT</h4>
-          <Contact contact={contact} setContact={setContact}/>
+          <Contact contact={contact} setContact={setContact} />
         </section>
 
         <section className="profile">
           <h4>PROFILE</h4>
-          <Profile profile={profile} setProfile={setProfile}/>
+          <Profile profile={profile} setProfile={setProfile} />
         </section>
 
         <section className="education">
           <h4>EDUCATION</h4>
           {education.map((study) => (
-            <div key={study.id} className="study">
-              <div className="form-line">
-                <label htmlFor={`institution-${study.id}`}>Institution</label>
-                <input
-                  value={study.institution}
-                  onChange={(e) =>
-                    setEducation(
-                      education.map((study2) =>
-                        study2.id === study.id
-                          ? { ...study2, institution: e.target.value }
-                          : study2,
-                      ),
-                    )
-                  }
-                  id={`institution-${study.id}`}
-                  type="text"
-                />
-              </div>
-
-              <div className="form-line">
-                <label htmlFor={`degree-${study.id}`}>Degree</label>
-                <input
-                  value={study.degree}
-                  id={`degree-${study.id}`}
-                  onChange={(e) =>
-                    setEducation(
-                      education.map((study2) =>
-                        study2.id === study.id
-                          ? { ...study2, degree: e.target.value }
-                          : study2,
-                      ),
-                    )
-                  }
-                  type="text"
-                />
-              </div>
-
-              <div className="form-line">
-                <label htmlFor={`startYear-${study.id}`}>Start Year</label>
-                <input
-                  value={study.startYear}
-                  onChange={(e) =>
-                    setEducation(
-                      education.map((study2) =>
-                        study2.id === study.id
-                          ? { ...study2, startYear: e.target.value }
-                          : study2,
-                      ),
-                    )
-                  }
-                  id={`startYear-${study.id}`}
-                  type="text"
-                />
-              </div>
-
-              <div className="form-line">
-                <label htmlFor={`endYear-${study.id}`}>End Year</label>
-                <input
-                  value={study.endYear}
-                  onChange={(e) =>
-                    setEducation(
-                      education.map((study2) =>
-                        study2.id === study.id
-                          ? { ...study2, endYear: e.target.value }
-                          : study2,
-                      ),
-                    )
-                  }
-                  id={`endYear-${study.id}`}
-                  type="text"
-                />
-              </div>
-
-              <div className="description-line">
-                <label htmlFor={`description-${study.id}`}>Description</label>
-                <textarea
-                  value={study.description}
-                  onChange={(e) =>
-                    setEducation(
-                      education.map((study2) =>
-                        study2.id === study.id
-                          ? { ...study2, description: e.target.value }
-                          : study2,
-                      ),
-                    )
-                  }
-                  id={`description-${study.id}`}
-                  type="text"
-                />
-              </div>
-            </div>
+            <Study
+              study={study}
+              education={education}
+              setEducation={setEducation}
+            />
           ))}
         </section>
 
