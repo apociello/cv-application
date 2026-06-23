@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import './CvPage.css';
 import Preview from '../components/Preview';
 import example from '../data/example';
+import Contact from '../components/Contact';
+import './CvPage.css';
+
 
 function CvPage() {
   const [contact, setContact] = useState({
@@ -21,66 +23,7 @@ function CvPage() {
       <div className="sections">
         <section className="contact">
           <h4>CONTACT</h4>
-
-          <div className="form-line">
-            <label htmlFor="first-name">First Name</label>
-            <input
-              value={contact.firstName}
-              onChange={(e) =>
-                setContact({ ...contact, firstName: e.target.value })
-              }
-              id="first-name"
-              type="text"
-            />
-          </div>
-
-          <div className="form-line">
-            <label htmlFor="last-name">Last Name</label>
-            <input
-              value={contact.lastName}
-              onChange={(e) =>
-                setContact({ ...contact, lastName: e.target.value })
-              }
-              id="last-name"
-              type="text"
-            />
-          </div>
-
-          <div className="form-line">
-            <label htmlFor="phone">Phone</label>
-            <input
-              value={contact.phone}
-              onChange={(e) =>
-                setContact({ ...contact, phone: e.target.value })
-              }
-              id="phone"
-              type="text"
-            />
-          </div>
-
-          <div className="form-line">
-            <label htmlFor="email">Email</label>
-            <input
-              value={contact.email}
-              onChange={(e) =>
-                setContact({ ...contact, email: e.target.value })
-              }
-              id="email"
-              type="text"
-            />
-          </div>
-
-          <div className="form-line">
-            <label htmlFor="location">Location</label>
-            <input
-              value={contact.location}
-              onChange={(e) =>
-                setContact({ ...contact, location: e.target.value })
-              }
-              id="location"
-              type="text"
-            />
-          </div>
+          <Contact contact={contact} setContact={setContact}/>
         </section>
 
         <section className="profile">
