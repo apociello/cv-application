@@ -32,7 +32,12 @@ section .form-line {
   justify-content: space-between;
 }
 
-.preview-container{
+section .description-line {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-container {
   flex: 1;
 }
 

@@ -169,7 +169,7 @@ function CvPage() {
                 />
               </div>
 
-              <div className="form-line">
+              <div className="description-line">
                 <label htmlFor={`description-${study.id}`}>Description</label>
                 <textarea
                   value={study.description}
@@ -267,7 +267,7 @@ function CvPage() {
                 />
               </div>
 
-              <div className="form-line">
+              <div className="description-line">
                 <label htmlFor={`description-${job.id}`}>Description</label>
                 <textarea
                   value={job.description}
