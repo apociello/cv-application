@@ -171,7 +171,7 @@ function CvPage() {
 
               <div className="form-line">
                 <label htmlFor="description">Description</label>
-                <input
+                <textarea
                   value={study.description}
                   onChange={(e) =>
                     setEducation(
@@ -269,7 +269,7 @@ function CvPage() {
 
               <div className="form-line">
                 <label htmlFor="description">Description</label>
-                <input
+                <textarea
                   value={job.description}
                   onChange={(e) =>
                     setExperience(
