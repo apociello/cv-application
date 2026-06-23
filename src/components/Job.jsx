@@ -1,6 +1,6 @@
 function Job({ job, experience, setExperience }) {
   return (
-    <div key={job.id} className="job">
+    <div className="job">
       <div className="form-line">
         <label htmlFor={`company-${job.id}`}>Company</label>
         <input

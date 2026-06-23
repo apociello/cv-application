@@ -37,6 +37,7 @@ function CvPage() {
           <h4>EDUCATION</h4>
           {education.map((study) => (
             <Study
+              key={study.id}
               study={study}
               education={education}
               setEducation={setEducation}
@@ -49,6 +50,7 @@ function CvPage() {
 
           {experience.map((job) => (
             <Job
+              key={job.id}
               job={job}
               experience={experience}
               setExperience={setExperience}

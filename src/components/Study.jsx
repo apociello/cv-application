@@ -1,6 +1,6 @@
 function Study({ study, education, setEducation }) {
   return (
-    <div key={study.id} className="study">
+    <div className="study">
       <div className="form-line">
         <label htmlFor={`institution-${study.id}`}>Institution</label>
         <input
