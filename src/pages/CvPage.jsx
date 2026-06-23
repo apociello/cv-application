@@ -16,27 +16,7 @@ function CvPage() {
     description: example.profile.description,
   });
 
-  const [education, setEducation] = useState([
-    {
-      id: crypto.randomUUID(),
-      institution: 'Boston University',
-      startYear: '2017',
-      endYear: '2020',
-      degree: 'Bachelor of Software Engineering',
-      description: `Studied software development, databases, algorithms and
-                  computer systems.`,
-    },
-    {
-      id: crypto.randomUUID(),
-      institution: 'Rice University',
-      startYear: '2020',
-      endYear: '2022',
-      degree: 'MSc Software Architecture & Distributed Systems',
-      description: `Specialized in large-scale system design, microservices
-                  architecture, concurrency, distributed computing, and
-                  performance optimization of backend systems.`,
-    },
-  ]);
+  const [education, setEducation] = useState(example.education);
 
   return (
     <main className="cv-container">

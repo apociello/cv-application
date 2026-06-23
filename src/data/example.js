@@ -15,6 +15,7 @@ const person = {
   },
   education: [
     {
+      id: crypto.randomUUID(),
       institution: 'Boston University',
       startYear: '2017',
       endYear: '2020',
@@ -23,6 +24,7 @@ const person = {
                   computer systems.`,
     },
     {
+      id: crypto.randomUUID(),
       institution: 'Rice University',
       startYear: '2020',
       endYear: '2022',
