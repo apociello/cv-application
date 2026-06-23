@@ -17,6 +17,7 @@ function CvPage() {
   });
 
   const [education, setEducation] = useState(example.education);
+  const [experience, setExperience] = useState(example.experience);
 
   return (
     <main className="cv-container">
@@ -94,6 +95,7 @@ function CvPage() {
             id=""
           ></textarea>
         </section>
+
         <section className="education">
           <h4>EDUCATION</h4>
           {education.map((study) => (
@@ -118,7 +120,10 @@ function CvPage() {
 
               <div className="form-line">
                 <label htmlFor="degree">Degree</label>
-                <input value={study.degree} id="degree" onChange={(e) =>
+                <input
+                  value={study.degree}
+                  id="degree"
+                  onChange={(e) =>
                     setEducation(
                       education.map((study2) =>
                         study2.id === study.id
@@ -126,12 +131,16 @@ function CvPage() {
                           : study2,
                       ),
                     )
-                  } type="text" />
+                  }
+                  type="text"
+                />
               </div>
 
               <div className="form-line">
                 <label htmlFor="start-year">Start Year</label>
-                <input value={study.startYear} onChange={(e) =>
+                <input
+                  value={study.startYear}
+                  onChange={(e) =>
                     setEducation(
                       education.map((study2) =>
                         study2.id === study.id
@@ -139,12 +148,17 @@ function CvPage() {
                           : study2,
                       ),
                     )
-                  } id="start-year" type="text" />
+                  }
+                  id="start-year"
+                  type="text"
+                />
               </div>
 
               <div className="form-line">
                 <label htmlFor="end-year">End Year</label>
-                <input value={study.endYear} onChange={(e) =>
+                <input
+                  value={study.endYear}
+                  onChange={(e) =>
                     setEducation(
                       education.map((study2) =>
                         study2.id === study.id
@@ -152,12 +166,17 @@ function CvPage() {
                           : study2,
                       ),
                     )
-                  } id="end-year" type="text" />
+                  }
+                  id="end-year"
+                  type="text"
+                />
               </div>
 
               <div className="form-line">
                 <label htmlFor="description">Description</label>
-                <input value={study.description} onChange={(e) =>
+                <input
+                  value={study.description}
+                  onChange={(e) =>
                     setEducation(
                       education.map((study2) =>
                         study2.id === study.id
@@ -165,7 +184,10 @@ function CvPage() {
                           : study2,
                       ),
                     )
-                  } id="description" type="text" />
+                  }
+                  id="description"
+                  type="text"
+                />
               </div>
             </div>
           ))}
@@ -174,30 +196,99 @@ function CvPage() {
         <section className="experience">
           <h4>EXPEREINCE</h4>
 
-          <div className="form-line">
-            <label htmlFor="company">Company</label>
-            <input id="company" type="text" />
-          </div>
+          {experience.map((job) => (
+            <div key={job.id} className="job">
+              <div className="form-line">
+                <label htmlFor="company">Company</label>
+                <input
+                  value={job.company}
+                  onChange={(e) =>
+                    setExperience(
+                      experience.map((job2) =>
+                        job.id === job2.id
+                          ? { ...job2, company: e.target.value }
+                          : job2,
+                      ),
+                    )
+                  }
+                  id="company"
+                  type="text"
+                />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="position">Position</label>
-            <input id="position" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="position">Position</label>
+                <input
+                  value={job.position}
+                  onChange={(e) =>
+                    setExperience(
+                      experience.map((job2) =>
+                        job.id === job2.id
+                          ? { ...job2, position: e.target.value }
+                          : job2,
+                      ),
+                    )
+                  }
+                  id="position"
+                  type="text"
+                />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="start-year">Start Year</label>
-            <input id="start-year" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="start-year">Start Year</label>
+                <input
+                  value={job.startYear}
+                  onChange={(e) =>
+                    setExperience(
+                      experience.map((job2) =>
+                        job.id === job2.id
+                          ? { ...job2, startYear: e.target.value }
+                          : job2,
+                      ),
+                    )
+                  }
+                  id="start-year"
+                  type="text"
+                />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="end-year">End Year</label>
-            <input id="end-year" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="end-year">End Year</label>
+                <input
+                  value={job.endYear}
+                  onChange={(e) =>
+                    setExperience(
+                      experience.map((job2) =>
+                        job.id === job2.id
+                          ? { ...job2, endYear: e.target.value }
+                          : job2,
+                      ),
+                    )
+                  }
+                  id="end-year"
+                  type="text"
+                />
+              </div>
 
-          <div className="form-line">
-            <label htmlFor="description">Description</label>
-            <input id="description" type="text" />
-          </div>
+              <div className="form-line">
+                <label htmlFor="description">Description</label>
+                <input
+                  value={job.description}
+                  onChange={(e) =>
+                    setExperience(
+                      experience.map((job2) =>
+                        job.id === job2.id
+                          ? { ...job2, description: e.target.value }
+                          : job2,
+                      ),
+                    )
+                  }
+                  id="description"
+                  type="text"
+                />
+              </div>
+            </div>
+          ))}
         </section>
       </div>
 
@@ -206,7 +297,7 @@ function CvPage() {
           contact={contact}
           profile={profile}
           education={education}
-          experience={example.experience}
+          experience={experience}
         />
       </div>
     </main>

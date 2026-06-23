@@ -36,6 +36,7 @@ const person = {
   ],
   experience: [
     {
+      id: crypto.randomUUID(),
       company: 'Nova Tech Solutions',
       startYear: '2022',
       endYear: '2023',
@@ -45,6 +46,7 @@ const person = {
                   gained hands-on experience with distributed systems concepts.`,
     },
     {
+      id: crypto.randomUUID(),
       company: 'Bright Path Systems',
       startYear: '2023',
       endYear: 'Present',
