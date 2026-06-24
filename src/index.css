@@ -20,6 +20,11 @@
   --color-preview-bg: white;
   --color-preview-text: black;
   --border-preview: 1px solid rgba(0, 0, 0, 0.18);
+  --border-divider: 1px solid rgb(154 154 154);
+  --color-label: var(--color-titles);
+  --color-input-bg: #fafcff;
+  --color-input-text: #000000;
+  --color-btn-trash: black;
 }
 
 :root.dark {
@@ -35,6 +40,11 @@
   --color-preview-bg: #16181d;
   --color-preview-text: rgb(152, 152, 152);
   --border-preview: 1px solid rgba(157, 157, 157, 0.18);
+  --border-divider: 1px solid rgb(169 169 169);
+  --color-label: var(--color-titles);
+  --color-input-bg: #252930;
+  --color-input-text: #eee;
+  --color-btn-trash: rgb(255, 255, 255);
 }
 
 * {

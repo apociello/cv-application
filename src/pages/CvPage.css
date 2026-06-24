@@ -19,22 +19,128 @@ section {
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  width: 350px;
+  width: 100%;
 }
 
 section h4 {
   margin-bottom: 0.5rem;
 }
 
+.study,
+.job {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: var(--border-divider);
+}
+
+.sections .contact,
+.study,
+.job {
+  gap: 2px;
+}
+
+.study:last-of-type,
+.job:last-of-type {
+  border-bottom: none;
+}
+
+.study:first-of-type,
+.job:first-of-type {
+  padding-top: 0;
+}
+
 section .form-line {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form-line label {
+  flex: 0 0 90px;
 }
 
 section .description-line {
   display: flex;
   flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 1rem;
+}
+
+.form-line label,
+.description-line label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-titles);
+  color: var(--color-label);
+}
+
+.form-line input {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+}
+
+.profile textarea,
+.description-line textarea {
+  padding: 0.4rem 0.5rem;
+  resize: vertical;
+  min-height: 5rem;
+  font-family: inherit;
+}
+
+.form-line input,
+.profile textarea,
+.description-line textarea {
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
+  border: 1px solid #ffffff15;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.job .trash-div,
+.study .trash-div {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  align-items: center;
+}
+
+.job .trash-div button,
+.study .trash-div button {
+  text-align: center;
+  color: var(--color-btn-trash);
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.add-div {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-div > button {
+  width: 100%;
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  padding: 0;
+  border-radius: 5px;
+  padding: 0.4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-div > button:hover {
+  background-color: var(--color-btn-bg-hover);
 }
 
 .preview-container {
