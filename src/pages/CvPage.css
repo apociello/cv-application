@@ -41,11 +41,6 @@ section h4 {
   gap: 2px;
 }
 
-.study:last-of-type,
-.job:last-of-type {
-  border-bottom: none;
-}
-
 .study:first-of-type,
 .job:first-of-type {
   padding-top: 0;
@@ -121,13 +116,9 @@ section .description-line {
   width: fit-content;
 }
 
-.add-div {
+.education > button,
+.experience > button {
   margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.add-div > button {
   width: 100%;
   background: var(--color-btn-bg);
   color: var(--color-btn-text);
@@ -139,7 +130,8 @@ section .description-line {
   align-items: center;
 }
 
-.add-div > button:hover {
+.education > button:hover,
+.experience > button:hover {
   background-color: var(--color-btn-bg-hover);
 }
 
