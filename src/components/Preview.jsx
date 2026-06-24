@@ -9,7 +9,7 @@ function Preview({ contact, profile, education, experience }) {
 
         <div className="preview-contact">
           <p>Telephone: {contact.phone}</p>
-          <p>email: {contact.email}</p>
+          <p>Email: {contact.email}</p>
           <p>{contact.location}</p>
         </div>
       </div>
