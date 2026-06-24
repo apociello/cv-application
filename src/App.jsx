@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import sunIcon from './assets/images/sun.svg';
 import moonIcon from './assets/images/moon.svg';
 import CvPage from './pages/CvPage';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

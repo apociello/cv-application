@@ -6,7 +6,7 @@ import Profile from '../components/Profile';
 import Study from '../components/Study';
 import Job from '../components/Job';
 import AddBtn from '../components/AddBtn';
-import './CvPage.css';
+import '../styles/CvPage.css';
 
 function CvPage() {
   const [contact, setContact] = useState({
