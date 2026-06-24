@@ -95,6 +95,13 @@ section .description-line {
   font-size: 0.85rem;
 }
 
+.form-line input:focus,
+.profile textarea:focus,
+.description-line textarea:focus {
+  outline: none;
+  border-color: #8a8a8a;
+}
+
 /* Buttons */
 .job .trash-div,
 .study .trash-div {
