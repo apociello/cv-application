@@ -29,3 +29,19 @@ main.home-info {
 .home-info button:hover {
   background-color: var(--color-btn-bg-hover);
 }
+
+/* - - - MEDIA - - - */
+@media (max-width: 440px) {
+  .home-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-info p {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .home-info button {
+    font-size: 1.2rem;
+  }
+}
