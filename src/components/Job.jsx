@@ -51,7 +51,7 @@ function Job({ job, experience, setExperience }) {
             )
           }
           id={`startYear-${job.id}`}
-          type="text"
+          type="number"
         />
       </div>
 
@@ -87,7 +87,6 @@ function Job({ job, experience, setExperience }) {
             )
           }
           id={`description-${job.id}`}
-          type="text"
         />
       </div>
 
@@ -96,6 +95,7 @@ function Job({ job, experience, setExperience }) {
           onClick={() =>
             setExperience(experience.filter((job2) => job2.id != job.id))
           }
+          aria-label="Delete experience entry"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

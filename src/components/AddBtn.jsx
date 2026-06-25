@@ -1,6 +1,6 @@
-function AddBtn({ onClick }) {
+function AddBtn({ onClick, label }) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} aria-label={label}>
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"

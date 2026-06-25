@@ -22,8 +22,10 @@ section {
   width: 100%;
 }
 
-section h4 {
-  margin-bottom: 0.5rem;
+section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
 }
 
 .study,
@@ -162,6 +164,10 @@ section .description-line {
   top: 3rem;
 }
 
+.preview h3 {
+  font-size: 0.8rem;
+}
+
 .preview p {
   color: var(--color-preview-text);
 }
@@ -169,6 +175,11 @@ section .description-line {
 .preview .preview-header {
   display: flex;
   justify-content: space-evenly;
+}
+
+.preview .first-name,
+.preview .last-name {
+  display: block;
 }
 
 .preview .preview-main {

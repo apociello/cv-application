@@ -51,7 +51,7 @@ function Study({ study, education, setEducation }) {
             )
           }
           id={`startYear-${study.id}`}
-          type="text"
+          type="number"
         />
       </div>
 
@@ -87,7 +87,6 @@ function Study({ study, education, setEducation }) {
             )
           }
           id={`description-${study.id}`}
-          type="text"
         />
       </div>
 
@@ -96,6 +95,7 @@ function Study({ study, education, setEducation }) {
           onClick={() =>
             setEducation(education.filter((study2) => study2.id != study.id))
           }
+          aria-label="Delete education entry"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -3,8 +3,10 @@ function Preview({ contact, profile, education, experience }) {
     <div className="preview">
       <div className="preview-header">
         <div className="preview-name">
-          <h1>{contact.firstName}</h1>
-          <h1>{contact.lastName}</h1>
+          <h1>
+            <span className="first-name">{contact.firstName}</span>
+            <span className="last-name">{contact.lastName}</span>
+          </h1>
         </div>
 
         <div className="preview-contact">
@@ -26,16 +28,16 @@ function Preview({ contact, profile, education, experience }) {
           <h2>Education</h2>
 
           {education.map((study) => (
-            <div key={study.degree} className="box-content">
+            <div key={study.id} className="box-content">
               <div className="box-title">
-                <h4>{study.institution}</h4>
+                <h3>{study.institution}</h3>
                 <p className="date">
                   {study.startYear} - {study.endYear}
                 </p>
               </div>
 
               <div className="box-info">
-                <h4>{study.degree}</h4>
+                <h3>{study.degree}</h3>
                 <p>{study.description}</p>
               </div>
             </div>
@@ -46,17 +48,16 @@ function Preview({ contact, profile, education, experience }) {
           <h2>Experience</h2>
 
           {experience.map((work) => (
-            <div key={work.position} className="box-content">
+            <div key={work.id} className="box-content">
               <div className="box-title">
-                <h4>{work.company}</h4>
+                <h3>{work.company}</h3>
                 <p className="date">
                   {work.startYear} - {work.endYear}
                 </p>
               </div>
 
               <div className="box-info">
-                <h4>{work.position}</h4>
-
+                <h3>{work.position}</h3>
                 <p>{work.description}</p>
               </div>
             </div>

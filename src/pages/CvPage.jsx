@@ -25,17 +25,17 @@ function CvPage() {
     <main className="cv-container">
       <div className="sections">
         <section className="contact">
-          <h4>CONTACT</h4>
+          <h2>Contact</h2>
           <Contact contact={contact} setContact={setContact} />
         </section>
 
         <section className="profile">
-          <h4>PROFILE</h4>
+          <h2>Profile</h2>
           <Profile profile={profile} setProfile={setProfile} />
         </section>
 
         <section className="education">
-          <h4>EDUCATION</h4>
+          <h2>Education</h2>
           {education.map((study) => (
             <Study
               key={study.id}
@@ -59,11 +59,12 @@ function CvPage() {
                 },
               ])
             }
+            label="Add education"
           />
         </section>
 
         <section className="experience">
-          <h4>EXPERIENCE</h4>
+          <h2>Experience</h2>
           {experience.map((job) => (
             <Job
               key={job.id}
@@ -87,6 +88,7 @@ function CvPage() {
                 },
               ])
             }
+            label="Add experience"
           />
         </section>
       </div>

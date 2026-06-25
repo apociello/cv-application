@@ -29,7 +29,7 @@ function Contact({ contact, setContact }) {
           value={contact.phone}
           onChange={(e) => setContact({ ...contact, phone: e.target.value })}
           id="phone"
-          type="text"
+          type="tel"
         />
       </div>
 
@@ -39,7 +39,7 @@ function Contact({ contact, setContact }) {
           value={contact.email}
           onChange={(e) => setContact({ ...contact, email: e.target.value })}
           id="email"
-          type="text"
+          type="email"
         />
       </div>
 

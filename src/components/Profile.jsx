@@ -3,8 +3,7 @@ function Profile({ profile, setProfile }) {
     <textarea
       value={profile}
       onChange={(e) => setProfile(e.target.value)}
-      name=""
-      id=""
+      aria-label="Brief professional summary"
     ></textarea>
   );
 }

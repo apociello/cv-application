@@ -20,7 +20,10 @@ function App() {
       <header>
         <p>CVStudio</p>
 
-        <button onClick={() => toggleDarkMode()}>
+        <button
+          onClick={() => toggleDarkMode()}
+          aria-label={darkMode ? 'Activate light mode' : 'Activate dark mode'}
+        >
           <img src={icon} width="21" alt="" />
         </button>
       </header>
