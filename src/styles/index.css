@@ -24,6 +24,7 @@
   --color-input-bg: #fafcff;
   --color-input-text: #000000;
   --color-btn-trash: black;
+  --border-input: 1px solid #ffffff15;
 }
 
 :root.dark {
@@ -44,6 +45,7 @@
   --color-input-bg: #252930;
   --color-input-text: #eee;
   --color-btn-trash: rgb(255, 255, 255);
+  --border-input: 1px solid #ffffff15;
 }
 
 * {
