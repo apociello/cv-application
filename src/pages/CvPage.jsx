@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Preview from '../components/Preview';
-import example from '../data/example';
-import Contact from '../components/Contact';
-import Profile from '../components/Profile';
-import Study from '../components/Study';
-import Job from '../components/Job';
-import AddBtn from '../components/AddBtn';
+import Preview from '../components/Preview.jsx';
+import example from '../data/example.js';
+import Contact from '../components/Contact.jsx';
+import Profile from '../components/Profile.jsx';
+import Study from '../components/Study.jsx';
+import Job from '../components/Job.jsx';
+import AddBtn from '../components/AddBtn.jsx';
 import '../styles/CvPage.css';
 
 function CvPage() {

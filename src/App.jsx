@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage.jsx';
 import sunIcon from './assets/images/sun.svg';
 import moonIcon from './assets/images/moon.svg';
-import CvPage from './pages/CvPage';
+import CvPage from './pages/CvPage.jsx';
 import './styles/App.css';
 
 function App() {
